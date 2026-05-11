@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>🛍 Personalized Shopping Recommendations</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🛍 Personalized Shopping Recommendations</h1>
+
+        <div class="btns-heading">
+            <button class="primary-btn" onclick="showExistingCustomer()">I have a Customer ID</button>
+            <button class="secondary-btn" onclick="showNewCustomer()">I'm a New Customer</button>
+        </div>
+
+        <!-- Existing Customer Form -->
+        <div id="existing-form" class="form-container">
+            <h2>Enter your Customer ID</h2>
+            <input type="text" id="customer-id" placeholder="Customer ID"/>
+            <button onclick="fetchRecommendations()">Get Recommendations</button>
+        </div>
+
+        <!-- New Customer Form -->
+        <div id="new-form" class="form-container">
+            <h2>Enter Your Details</h2>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age" />
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="segment">Customer Segment</label>
+                <select id="segment">
+                    <option value="New Visitor">New Visitor</option>
+                    <option value="Occasional Shopper">Occasional Shopper</option>
+                    <option value="Frequent Buyer">Frequent Buyer</option>
+                </select>
+            </div>
+
+            <button class="primary-btn" onclick="fetchNewRecommendations()">Get Recommendations</button>
+        </div>
+
+        <div id="recommendations"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
