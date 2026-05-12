@@ -1,4 +1,6 @@
 __pycache__/
-.env
-# backend/data/
 *.pyc
+venv/
+.env
+.idea/
+.DS_Store
